@@ -61,7 +61,7 @@ public class NametagEdit extends JavaPlugin {
             pluginManager.registerEvents(new HookGuilds(handler), this);
         }
 
-        getCommand("ne").setExecutor(new NametagCommand(handler));
+        getCommand("st").setExecutor(new NametagCommand(handler));
 
         if (api == null) {
             api = new NametagAPI(handler, manager);
@@ -93,7 +93,7 @@ public class NametagEdit extends JavaPlugin {
         Bukkit.getPluginManager().disablePlugin(this);
         getLogger().severe(new StringBuilder()
                 .append("\n------------------------------------------------------\n")
-                .append("[WARNING] NametagEdit v").append(getDescription().getVersion()).append(" Failed to load! [WARNING]")
+                .append("[WARNING] SpaceTags v").append(getDescription().getVersion()).append(" Failed to load! [WARNING]")
                 .append("\n------------------------------------------------------")
                 .append("\nThis might be an issue with reflection. REPORT this:\n> ")
                 .append(wrapper.error)
